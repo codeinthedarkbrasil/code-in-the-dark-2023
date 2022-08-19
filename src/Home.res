@@ -749,7 +749,7 @@ module Footer = {
           {`Feito com `->s}
           <Link underlined=true label=`ReScript` href="https://rescript-lang.org" />
           {` pela `->s}
-          <Link underlined=true label=`Comunidade ReScript Brasil` />
+          <Link underlined=true label=`ReScript Brasil` />
         </Typography>
         <Typography
           tag=#p
