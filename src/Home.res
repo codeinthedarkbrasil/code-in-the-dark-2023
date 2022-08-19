@@ -104,6 +104,7 @@ module Link = {
       ?target
       innerRef=?{innerRef->Js.Nullable.toOption->Belt.Option.map(ReactDOM.Ref.domRef)}
       tag=#a
+      rel="noopener noreferrer"
       fontSize
       className=link>
       {label->s}
@@ -177,7 +178,13 @@ module Header = {
         position=[xs(#relative)]
         width=[xs(72->#px), md(127->#px)]
         height=[xs(78->#px), md(139->#px)]>
-        <Next.Image src="/logo.webp" layout=#fill />
+        <Next.Image
+          src="/logo.webp"
+          layout=#fill
+          quality=100.0
+          priority=true
+          alt=`Logo Code In The Dark Brasil`
+        />
       </Box>
       <Hidden on=[xs(true), sm(false)]>
         <Stack direction=[xs(#horizontal)] gap=[xs(#one(4.0))] alignItems=[xs(#center)]>
@@ -218,29 +225,13 @@ module RoundedButton = {
     <Base
       ?href
       tag=#a
+      rel="noopener noreferrer"
       height=[xs(124->#px), sm(142->#px), md(172->#px)]
       width=[xs(124->#px), sm(142->#px), md(172->#px)]
       fontSize=[xs(16->#px), md(20->#px)]
       className=button>
       {label->s}
     </Base>
-}
-
-module FloatingImage = {
-  @react.component
-  let make = (
-    ~src,
-    ~width=[lg(348->#px)],
-    ~height=[lg(232->#px)],
-    ~top=?,
-    ~left=?,
-    ~right=?,
-    ~bottom=?,
-  ) => {
-    <Box position=[xs(#absolute)] width height ?top ?left ?right ?bottom>
-      <Next.Image src layout=#fill />
-    </Box>
-  }
 }
 
 module Hero = {
@@ -306,7 +297,7 @@ module HowItWorksStep = {
   })
 
   @react.component
-  let make = (~index, ~image, ~title, ~description) => {
+  let make = (~index, ~image, ~imageAlt, ~title, ~description) => {
     <Stack alignItems=[xs(#center)] gap=[xs(#one(1.0))]>
       <Typography
         m=[xs(0.0)]
@@ -320,7 +311,7 @@ module HowItWorksStep = {
         position=[xs(#relative)]
         width=[xs(320->#px), sm(424->#px), md(664->#px)]
         height=[xs(185->#px), sm(245->#px), md(384->#px)]>
-        <Next.Image src=image layout=#fill quality=100.0 />
+        <Next.Image src=image layout=#fill quality=100.0 priority=true alt=imageAlt />
       </Box>
       <Stack transform=[xs(#translateY(-24->#px))] gap=[xs(#one(1.0))] alignItems=[xs(#center)]>
         <Typography
@@ -362,18 +353,21 @@ module HowItWorks = {
         alignItems=[xs(#center), lg(#"flex-end")]>
         <HowItWorksStep
           index=`01`
+          imageAlt=`A imagem mostra um monitor com o editor do code in the dark aberto e ao fundo é possível ver os participantes da competição.`
           image=`/how-it-works-3.webp`
           title=`4 rounds de 15 minutos`
           description=`4 Players por ronda lutarão contra o relógio para chegar mais próximo do layout apresentado`
         />
         <HowItWorksStep
           index=`02`
+          imageAlt=`A imagem mostra um monitor com o editor do code in the dark aberto e ao fundo é possível ver os participantes da competição. No fundo também há várias luzes de diversas cores.`
           image=`/how-it-works-2.webp`
           title=`HTML & CSS only!`
           description=`Com apenas uma imagem de referência, sua missão será produzir o HTML e CSS em 15 minutos`
         />
         <HowItWorksStep
           index=`03`
+          imageAlt=`A imagem mostra um monitor com o editor do code in the dark aberto e ao fundo é possível ver os participantes da competição. No fundo também há várias luzes de diversas cores.`
           image=`/how-it-works-1.webp`
           title=`Sem previews`
           description=`Durante as rondas não é permitido ver no navegador como está ficando o layout muhahaaha!`
@@ -478,18 +472,20 @@ module FaqItem = {
     open Radix
 
     <Accordion.Item value=id className=item>
-      <Accordion.Header>
-        <Accordion.Trigger className=trigger>
-          <Typography
-            tag=#p
-            fontWeight=[xs(#400)]
-            fontFamily=[xs(#custom(["Space Mono"]))]
-            fontSize=[xs(20->#px)]
-            letterSpacing=[xs(-0.03->#em)]>
-            {title->s}
-          </Typography>
-          <Base tag=#span />
-        </Accordion.Trigger>
+      <Accordion.Header asChild=true>
+        <div>
+          <Accordion.Trigger className=trigger>
+            <Typography
+              tag=#p
+              fontWeight=[xs(#400)]
+              fontFamily=[xs(#custom(["Space Mono"]))]
+              fontSize=[xs(20->#px)]
+              letterSpacing=[xs(-0.03->#em)]>
+              {title->s}
+            </Typography>
+            <Base tag=#span />
+          </Accordion.Trigger>
+        </div>
       </Accordion.Header>
       <Accordion.Content className=content> children </Accordion.Content>
     </Accordion.Item>
@@ -590,7 +586,9 @@ module StaffMember = {
   @react.component
   let make = (~name, ~pfp, ~twitter="", ~linkedin="") => {
     <Stack gap=[xs(#one(0.5))]>
-      <Next.Image src=pfp layout=#fixed width=224.0 height=232.0 quality=100.0 />
+      <Next.Image
+        src=pfp layout=#fixed alt={`Foto do Membro ${name}`} width=224.0 height=232.0 quality=100.0
+      />
       <Typography
         m=[xs(0.0)]
         tag=#p
@@ -600,8 +598,12 @@ module StaffMember = {
         fontFamily=[xs(#custom(["Space Mono"]))]>
         {name->s}
       </Typography>
-      <a href=twitter target="_blank" className=link> {`@twitter?`->s} </a>
-      <a href=linkedin target="_blank" className=link> {`@linkedin?`->s} </a>
+      <a href=twitter rel="noopener noreferrer" target="_blank" className=link>
+        {`@twitter?`->s}
+      </a>
+      <a href=linkedin rel="noopener noreferrer" target="_blank" className=link>
+        {`@linkedin?`->s}
+      </a>
     </Stack>
   }
 }
@@ -636,6 +638,8 @@ module Sponsors = {
         alignItems=[xs(#center)]>
         <Box
           tag=#a
+          rel="noopener noreferrer"
+          ariaLabel=`Site da Juntos Somos Mais`
           href="https://www.juntossomosmais.com.br/"
           target="_blank"
           position=[xs(#relative)]
@@ -658,6 +662,8 @@ module Supporters = {
         alignItems=[xs(#center)]>
         <Box
           tag=#a
+          rel="noopener noreferrer"
+          ariaLabel=`Site da Comunidade ReScript Brasil`
           href="https://github.com/rescriptbr"
           target="_blank"
           position=[xs(#relative)]
