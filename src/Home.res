@@ -312,7 +312,7 @@ module HowItWorksStep = {
         position=[xs(#relative)]
         width=[xs(320->#px), sm(424->#px), md(664->#px)]
         height=[xs(185->#px), sm(245->#px), md(384->#px)]>
-        <Next.Image src=image layout=#fill quality=100.0 priority=true alt=imageAlt />
+        <Next.Image src=image layout=#fill quality=100.0 alt=imageAlt />
       </Box>
       <Stack transform=[xs(#translateY(-24->#px))] gap=[xs(#one(1.0))] alignItems=[xs(#center)]>
         <Typography
