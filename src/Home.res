@@ -744,18 +744,16 @@ let default = () => {
   <>
     <Next.Head>
       <title> {`Code In The Dark - Edição Brasil 2023`->s} </title>
-      <Next.Head>
-        <meta name="image" content="og-image.png" />
-        <meta name="twitter:image" content=`https://codeinthedark.com.br/og-image.png` />
-        <meta name="twitter:creator" content="@CodeintheDarkBR" />
-        <meta name="twitter:title" content=`Code In The Dark` />
-        <meta
-          name="twitter:description"
-          content=`Então você acha que sabe front-end? Imagine uma competição assim: Vários desenvolvedores(as) front-end precisam codificar uma página em apenas 15 minutos... Até aí o desafio já é enorme, concorda? Agora adicione o fato de que eles(as) não podem ver o resultado da página no browser, somente o código fonte, usando apenas HTML e CSS: Esse é o Code in the Dark!`
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content=`https://codeinthedark.com.br` />
-      </Next.Head>
+      <meta name="image" content="og-image.png" />
+      <meta name="twitter:image" content=`https://codeinthedark.com.br/og-image.png` />
+      <meta name="twitter:creator" content="@CodeintheDarkBR" />
+      <meta name="twitter:title" content=`Code In The Dark` />
+      <meta
+        name="twitter:description"
+        content=`Então você acha que sabe front-end? Imagine uma competição assim: Vários desenvolvedores(as) front-end precisam codificar uma página em apenas 15 minutos... Até aí o desafio já é enorme, concorda? Agora adicione o fato de que eles(as) não podem ver o resultado da página no browser, somente o código fonte, usando apenas HTML e CSS: Esse é o Code in the Dark!`
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content=`https://codeinthedark.com.br` />
     </Next.Head>
     <Stack pt=[xs(2.0), md(4.0), lg(8.0)] display=[xs(#flex)] alignItems=[xs(#center)]>
       <Stack
