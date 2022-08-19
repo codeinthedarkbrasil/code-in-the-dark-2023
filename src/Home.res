@@ -642,6 +642,20 @@ module Sponsors = {
           width=[xs(224->#px), md(321->#px)]>
           <Next.Image src="/juntos-somos-mais.webp" layout=#responsive width=321.0 height=88.0 />
         </Box>
+      </Stack>
+    </Stack>
+  }
+}
+
+module Supporters = {
+  @react.component
+  let make = () => {
+    <Stack alignItems=[xs(#center)] gap=[xs(#one(6.0))]>
+      <SectionTitle> {`Apoio`->s} </SectionTitle>
+      <Stack
+        direction=[xs(#vertical), sm(#horizontal)]
+        gap=[xs(#one(4.0)), md(#one(8.0))]
+        alignItems=[xs(#center)]>
         <Box
           tag=#a
           href="https://github.com/rescriptbr"
@@ -735,6 +749,7 @@ let default = () => {
           // Ainda não temos a seção "Vamos jogar?"
           <Staff />
           <Sponsors />
+          <Supporters />
         </Stack>
       </Stack>
       <Footer />
