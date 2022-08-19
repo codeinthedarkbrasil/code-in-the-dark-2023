@@ -1,1 +1,9 @@
-Content-Security-Policy: default-src 'self';
+/*
+  X-Frame-Options: DENY
+  Referrer-Policy: origin-when-cross-origin
+  X-XSS-Protection: 1; mode=block
+  Feature-Policy: fullscreen 'self'; camera 'none'
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: geolocation=(self)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'unsafe-inline' 'self' 'unsafe-eval' 'unsafe-inline'; 
