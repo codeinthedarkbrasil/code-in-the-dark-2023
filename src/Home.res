@@ -17,8 +17,7 @@ Emotion.injectGlobal({
   },
   "html": {
     "fontSize": "62.5%",
-    "backgroundImage": "url('/noised-background.png')",
-    "backgroundSize": "cover",
+    "background": Theme.colors(#background),
   },
 })
 
