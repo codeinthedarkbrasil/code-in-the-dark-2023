@@ -796,7 +796,7 @@ let default = () => {
   <>
     <Next.Head>
       <title> {`Code In The Dark - Edição Brasil 2023`->s} </title>
-      <meta name="image" content="og-image.png" />
+      <meta name="image" content="/og-image.png" />
       <meta name="twitter:image" content=`https://codeinthedark.com.br/og-image.png` />
       <meta name="twitter:creator" content="@CodeintheDarkBR" />
       <meta name="twitter:title" content=`Code In The Dark` />
