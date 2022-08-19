@@ -19,6 +19,7 @@
   "bs-dependencies": [
     "@rescript/react",
     "@rescriptbr/ancestor",
+    "@rescriptbr/radix-ui",
     "rescript-next"
   ]
 }

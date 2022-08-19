@@ -482,6 +482,11 @@
   resolved "https://registry.yarnpkg.com/@rescriptbr/ancestor/-/ancestor-1.0.0-2.tgz#308e948f48bba5cab23420bcb972dd86368ba43f"
   integrity sha512-JfGv/ItPfkJczCYupUKHvb+/Bv91BfZoG7XhENUe8J4npca23aiRIgU1sbTks4n4V6dymFYJAZxV2gfFQ8I5MA==
 
+"@rescriptbr/radix-ui@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@rescriptbr/radix-ui/-/radix-ui-1.1.1.tgz#98ebd6ff8cc8b24bbcf9f4828b4bcb8d853e3b39"
+  integrity sha512-q2B7LEgdy7ff5x875bde6vt1YU8jrR11+wuINrrRO4d/sNzU7XopmX1d0KW/QHA4TkH0r9o663pEre+0qOcj7A==
+
 "@swc/helpers@0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.3.tgz#16593dfc248c53b699d4b5026040f88ddb497012"
