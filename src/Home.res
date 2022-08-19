@@ -75,24 +75,26 @@ module SectionTitle = {
 }
 
 module Link = {
-  let link = Emotion.css({
-    "fontFamily": "Space Mono",
-    "fontWeight": 700,
-    "letterSpacing": "-0.03em",
-    "color": "white",
-    "cursor": "pointer",
-    "transition": "200ms color",
-    "textDecoration": 0,
-    "&:hover,&:focus": {
-      "textDecoration": "underline",
-      "color": Theme.colors(#primary100),
-    },
-  })
+  let link = (~underlined) =>
+    Emotion.css({
+      "fontFamily": "Space Mono",
+      "fontWeight": 700,
+      "letterSpacing": "-0.03em",
+      "color": "white",
+      "cursor": "pointer",
+      "transition": "200ms color",
+      "textDecoration": underlined ? "underline" : "none",
+      "&:hover,&:focus": {
+        "textDecoration": "underline",
+        "color": Theme.colors(#primary100),
+      },
+    })
 
   @react.component
   let make = React.forwardRef((
     ~label,
     ~href=?,
+    ~underlined=false,
     ~target=?,
     ~fontSize=[xs(16->#px)],
     ~onClick=?,
@@ -106,7 +108,7 @@ module Link = {
       tag=#a
       rel="noopener noreferrer"
       fontSize
-      className=link>
+      className={link(~underlined)}>
       {label->s}
     </Base>
   })
@@ -644,7 +646,13 @@ module Sponsors = {
           target="_blank"
           position=[xs(#relative)]
           width=[xs(224->#px), md(321->#px)]>
-          <Next.Image src="/juntos-somos-mais.webp" layout=#responsive width=321.0 height=88.0 />
+          <Next.Image
+            src="/juntos-somos-mais.webp"
+            layout=#responsive
+            width=321.0
+            height=88.0
+            alt="Logo da empresa Juntos Somos Mais"
+          />
         </Box>
       </Stack>
     </Stack>
@@ -668,7 +676,13 @@ module Supporters = {
           target="_blank"
           position=[xs(#relative)]
           width=[xs(224->#px), md(321->#px)]>
-          <Next.Image src="/rescript.webp" layout=#responsive width=302.0 height=95.0 />
+          <Next.Image
+            alt="Logo da comunidade ReScript Brasil"
+            src="/rescript.webp"
+            layout=#responsive
+            width=302.0
+            height=95.0
+          />
         </Box>
       </Stack>
     </Stack>
@@ -683,18 +697,16 @@ module Footer = {
       bgPosition=[xs(#top)]
       bgSize=[xs(#cover)]
       bgImage=[xs(#url("/footer-cover.png"))]
-      height=[xs(400->#px), md(642->#px), lg(800->#px)]
       width=[xs(100.0->#pct)]
       tag=#footer>
-      <Box
+      <Stack
         height=[xs(100.0->#pct)]
         pt=[xs(4.0), md(10.0)]
-        justifyContent=[xs(#center)]
-        display=[xs(#flex)]
+        alignItems=[xs(#center)]
         px=[xs(3.0), md(6.0)]
         width=[xs(100.0->#pct)]>
         <Stack
-          height=[xs(100.0->#pct)]
+          minH=[xs(300->#px), md(600->#px)]
           pb=[xs(4.0)]
           direction=[xs(#vertical), md(#horizontal)]
           maxW=[xs(962->#px)]
@@ -714,7 +726,47 @@ module Footer = {
             {`codeinthedark • brasil •  2023`->s}
           </Typography>
         </Stack>
-      </Box>
+      </Stack>
+      <Stack
+        mt=[xs(4.0)]
+        pb=[xs(3.0)]
+        width=[xs(100.0->#pct)]
+        alignItems=[xs(#center)]
+        justifyContent=[xs(#center)]
+        direction=[xs(#vertical), md(#horizontal)]
+        divider={<Hidden
+          on=[xs(true), md(false)] tag=#span color=[xs(#white)] fontSize=[xs(24->#px)]>
+          {`•`->s}
+        </Hidden>}
+        gap=[xs(#one(2.0))]>
+        <Typography
+          tag=#p
+          textAlign=[xs(#center)]
+          m=[xs(0.0)]
+          fontSize=[xs(16->#px)]
+          color=[xs(#white)]
+          fontFamily=[xs(#custom(["Space Mono"]))]>
+          {`Feito com `->s}
+          <Link underlined=true label=`ReScript` href="https://rescript-lang.org" />
+          {` pela `->s}
+          <Link underlined=true label=`Comunidade ReScript Brasil` />
+        </Typography>
+        <Typography
+          tag=#p
+          textAlign=[xs(#center)]
+          m=[xs(0.0)]
+          fontSize=[xs(16->#px)]
+          color=[xs(#white)]
+          fontFamily=[xs(#custom(["Space Mono"]))]>
+          {`Design por `->s}
+          <Link
+            underlined=true
+            label=`Anah Assumpção`
+            href="https://www.behance.net/anacomh"
+            target="_blank"
+          />
+        </Typography>
+      </Stack>
     </Box>
   }
 }
