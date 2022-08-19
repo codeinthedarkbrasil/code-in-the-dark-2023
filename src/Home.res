@@ -630,14 +630,27 @@ module Sponsors = {
   let make = () => {
     <Stack alignItems=[xs(#center)] gap=[xs(#one(6.0))]>
       <SectionTitle> {`Patrocínio`->s} </SectionTitle>
-      <Box
-        tag=#a
-        href="https://www.juntossomosmais.com.br/"
-        target="_blank"
-        position=[xs(#relative)]
-        width=[xs(224->#px), md(321->#px)]>
-        <Next.Image src="/juntos-somos-mais.webp" layout=#responsive width=321.0 height=88.0 />
-      </Box>
+      <Stack
+        direction=[xs(#vertical), sm(#horizontal)]
+        gap=[xs(#one(4.0)), md(#one(8.0))]
+        alignItems=[xs(#center)]>
+        <Box
+          tag=#a
+          href="https://www.juntossomosmais.com.br/"
+          target="_blank"
+          position=[xs(#relative)]
+          width=[xs(224->#px), md(321->#px)]>
+          <Next.Image src="/juntos-somos-mais.webp" layout=#responsive width=321.0 height=88.0 />
+        </Box>
+        <Box
+          tag=#a
+          href="https://github.com/rescriptbr"
+          target="_blank"
+          position=[xs(#relative)]
+          width=[xs(224->#px), md(321->#px)]>
+          <Next.Image src="/rescript.webp" layout=#responsive width=302.0 height=95.0 />
+        </Box>
+      </Stack>
     </Stack>
   }
 }
