@@ -273,7 +273,7 @@ module HowItWorksTitle = {
             letterSpacing=[xs(0.13->#em)]
             fontSize=[xs(16->#px)]
             color=[xs(#gray100)]>
-            {`Entenda como jogar o evento mais evento mais fixe de Front-end! `->s}
+            {`Entenda como funciona o evento mais animado da comunidade Front-end`->s}
           </Typography>
         </Box>
       </Stack>
@@ -357,7 +357,7 @@ module HowItWorks = {
           imageAlt=`A imagem mostra um monitor com o editor do code in the dark aberto e ao fundo é possível ver os participantes da competição.`
           image=`/how-it-works-3.webp`
           title=`4 rounds de 15 minutos`
-          description=`4 Players por ronda lutarão contra o relógio para chegar mais próximo do layout apresentado`
+          description=`4 Players por rodada se enfrentam em uma luta contra o relógio para chegar mais próximo do layout apresentado`
         />
         <HowItWorksStep
           index=`02`
@@ -371,7 +371,7 @@ module HowItWorks = {
           imageAlt=`A imagem mostra um monitor com o editor do code in the dark aberto e ao fundo é possível ver os participantes da competição. No fundo também há várias luzes de diversas cores.`
           image=`/how-it-works-1.webp`
           title=`Sem previews`
-          description=`Durante as rondas não é permitido ver no navegador como está ficando o layout muhahaaha!`
+          description=`Durante as rodadas não é permitido ver no navegador como está ficando o layout muhahaaha!`
         />
       </Stack>
     </Stack>
@@ -513,56 +513,51 @@ module Faq = {
         <Accordion.Root _type=#multiple>
           <FaqItem title=`Quem pode participar?` id="1">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`O evento é focado apenas em desenvolvedores(as) front-end e isso será pré-requisito nas inscrições! De estagiário(a) a sênior, todos poderão participar.`->s}
             </FaqAnswer>
           </FaqItem>
           <FaqItem title=`Posso ir apenas para assistir?` id="2">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Na real, quem estiver lá vai poder interagir votando em cada rodada da competição. Além disso, caso não seja um dos(as) competidores, a oportunidade de fazer network vai ser incrível!`->s}
             </FaqAnswer>
           </FaqItem>
-          <FaqItem title=`Como será feita a escolha dos participantes das rodadas?` id="3">
+          <FaqItem title=`Eu quero competir. Como será feita a escolha dos participantes das rodadas?` id="3">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Serão 16 competidores e, para participar, você precisará se inscrever no começo do evento. Se tivermos mais de 16 interessados, faremos um sorteio.`->s}
             </FaqAnswer>
           </FaqItem>
           <FaqItem title=`Posso usar meu editor de código habitual?` id="4">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Não. O editor será o do evento.`->s}
             </FaqAnswer>
           </FaqItem>
           <FaqItem title=`Preciso levar o meu computador para participar?` id="5">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Não. Cada participante terá um computador a disposição com a mesma característica para todos.`->s}
             </FaqAnswer>
           </FaqItem>
           <FaqItem
             title=`Posso usar alguma ferramenta de medição de pixels, de cor ou qualquer outra coisa parecida?`
             id="6">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Definitivamente, não! Você só poderá ter acesso ao editor. Só. Mais nada!`->s}
             </FaqAnswer>
           </FaqItem>
-          <FaqItem title=`Eu consigo ver o resultado do que eu estiver a fazer?` id="7">
+          <FaqItem title=`Eu consigo ver o resultado do que eu estiver fazendo, né?` id="7">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Não, apenas o código, sem preview ou visualização do resultado.`->s}
             </FaqAnswer>
           </FaqItem>
-          <FaqItem title=`Eu consigo ver o resultado do que eu estiver a fazer?` id="8">
+          <FaqItem title=`O público vai fazer o quê enquanto os competidores estiverem codando?` id="8">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Quem for pra assistir não vai só assistir! O público vai votar no melhor resultado e definir os vencedores de cada rodada`->s}
             </FaqAnswer>
           </FaqItem>
           <FaqItem
-            title=`O que é que o público vai fazer enquanto os competidores estiverem a desenvolver?`
+            title=`Quem for pra assistir, vai poder ajudar os participantes?`
             id="9">
             <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
-            </FaqAnswer>
-          </FaqItem>
-          <FaqItem title=`Como foi a edição de Julho de 2018?` id="10">
-            <FaqAnswer>
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`->s}
+              {`Negativo! O público não vai poder dar pitaco e nem assoprar o que está vendo na tela para os participantes. Quem fizer isso, desclassificará automaticamente o competidor!`->s}
             </FaqAnswer>
           </FaqItem>
         </Accordion.Root>
@@ -600,10 +595,10 @@ module StaffMember = {
         {name->s}
       </Typography>
       <a href=twitter rel="noopener noreferrer" target="_blank" className=link>
-        {`@twitter?`->s}
+        {`@twitter`->s}
       </a>
       <a href=linkedin rel="noopener noreferrer" target="_blank" className=link>
-        {`@linkedin?`->s}
+        {`@linkedin`->s}
       </a>
     </Stack>
   }
@@ -616,12 +611,12 @@ module Staff = {
       <SectionTitle> {`Staff`->s} </SectionTitle>
       <Stack gap=[xs(#one(3.0))] direction=[xs(#vertical), lg(#horizontal)]>
         <Stack direction=[xs(#vertical), sm(#horizontal)] gap=[xs(#one(3.0))]>
-          <StaffMember name="Sergio Nascimento" twitter="https://twitter.com" pfp="/sergio.webp" />
-          <StaffMember name="Vitor Mendrone" twitter="https://twitter.com" pfp="/mendrone.webp" />
+          <StaffMember name="Sergio Nascimento" twitter="https://twitter.com/elvisdetona" pfp="/sergio.webp" linkedin="https://www.linkedin.com/in/elvisdetona/" />
+          <StaffMember name="Vitor Mendrone" twitter="https://twitter.com/vhmendrone" pfp="/mendrone.webp" linkedin="https://www.linkedin.com/in/vitor-mendrone/"/>
         </Stack>
         <Stack direction=[xs(#vertical), sm(#horizontal)] gap=[xs(#one(3.0))]>
-          <StaffMember name="Leandro Matos" twitter="https://twitter.com" pfp="/leandro.webp" />
-          <StaffMember name=`Anah Assumpção` twitter="https://twitter.com" pfp="/anah.webp" />
+          <StaffMember name=`Anah Assumpção` twitter="https://twitter.com/anah_assumpcao" pfp="/anah.webp" linkedin="https://www.linkedin.com/in/anacomh/"/>
+          <StaffMember name="Leandro Matos" twitter="https://twitter.com/leandromatos" pfp="/leandro.webp" linkedin="https://www.linkedin.com/in/leandromatos/" />
         </Stack>
       </Stack>
     </Stack>
@@ -637,22 +632,22 @@ module Sponsors = {
         direction=[xs(#vertical), sm(#horizontal)]
         gap=[xs(#one(4.0)), md(#one(8.0))]
         alignItems=[xs(#center)]>
-        <Box
-          tag=#a
-          rel="noopener noreferrer"
-          ariaLabel=`Site da Juntos Somos Mais`
-          href="https://www.juntossomosmais.com.br/"
-          target="_blank"
-          position=[xs(#relative)]
-          width=[xs(224->#px), md(321->#px)]>
-          <Next.Image
-            src="/juntos-somos-mais.webp"
-            layout=#responsive
-            width=321.0
-            height=88.0
-            alt="Logo da empresa Juntos Somos Mais"
-          />
-        </Box>
+        // <Box
+        //   tag=#a
+        //   rel="noopener noreferrer"
+        //   ariaLabel=``
+        //   href=""
+        //   target="_blank"
+        //   position=[xs(#relative)]
+        //   width=[xs(224->#px), md(321->#px)]>
+        //   <Next.Image
+        //     src="/juntos-somos-mais.webp"
+        //     layout=#responsive
+        //     width=321.0
+        //     height=88.0
+        //     alt="Logo da empresa Juntos Somos Mais"
+        //   />
+        // </Box>
       </Stack>
     </Stack>
   }
@@ -688,6 +683,36 @@ module Supporters = {
   }
 }
 
+module Execution = {
+  @react.component
+  let make = () => {
+    <Stack alignItems=[xs(#center)] gap=[xs(#one(6.0))]>
+      <SectionTitle> {`Realização`->s} </SectionTitle>
+      <Stack
+        direction=[xs(#vertical), sm(#horizontal)]
+        gap=[xs(#one(4.0)), md(#one(8.0))]
+        alignItems=[xs(#center)]>
+        <Box
+          tag=#a
+          rel="noopener noreferrer"
+          ariaLabel=`Site do Frontin`
+          href="https://frontinsampa.com.br/"
+          target="_blank"
+          position=[xs(#relative)]
+          width=[xs(224->#px), md(321->#px)]>
+          <Next.Image
+            alt="Logo do Frontin"
+            src="/frontin.webp"
+            layout=#responsive
+            width=150.0
+            height=150.0
+          />
+        </Box>
+      </Stack>
+    </Stack>
+  }
+}
+
 module Footer = {
   @react.component
   let make = () => {
@@ -714,7 +739,9 @@ module Footer = {
           gap=[xs(#one(4.0))]
           display=[xs(#flex)]>
           <Stack gap=[xs(#one(4.0))]>
-            <Link label=`Facebook` /> <Link label=`Instagram` /> <Link label=`Twitter` />
+            <Link label=`Facebook` href="https://www.facebook.com/codeinthedarkbr" />
+            <Link label=`Instagram` href="https://www.instagram.com/codeinthedarkbrasil/"/>
+            <Link label=`Twitter` href="https://twitter.com/CodeintheDarkBR" />
           </Stack>
           <Typography
             tag=#p
@@ -819,6 +846,7 @@ let default = () => {
           <Staff />
           <Sponsors />
           <Supporters />
+          <Execution />
         </Stack>
       </Stack>
       <Footer />
